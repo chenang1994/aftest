@@ -29,6 +29,7 @@ jobs:
       
   build_friendlywrt:
     needs: prepare_release
+    timeout-minutes: 720
     runs-on: ubuntu-20.04
     #if: github.event.repository.owner.id == github.event.sender.id
     strategy:
