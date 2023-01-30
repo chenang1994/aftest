@@ -21,6 +21,11 @@ EOL
     git clone https://github.com/jerrykuku/luci-theme-argon.git --depth 1 -b master
 })
 echo "CONFIG_PACKAGE_luci-theme-argon=y" >> configs/rockchip/01-nanopi
+#feeds.conf.default
+echo 'src-git helloworld https://github.com/fw876/helloworld' >> friendlywrt/feeds.conf.default
+echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall.git;packages' >> friendlywrt/feeds.conf.default
+echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git;luci' >> friendlywrt/feeds.conf.default
+#
 sed -i -e 's/function init_theme/function old_init_theme/g' friendlywrt/target/linux/rockchip/armv8/base-files/root/setup.sh
 cat > /tmp/appendtext.txt <<EOL
 function init_theme() {
