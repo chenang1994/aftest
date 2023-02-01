@@ -3,7 +3,10 @@
 sed -i -e '/CONFIG_MAKE_TOOLCHAIN=y/d' configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_IB=y/# CONFIG_IB is not set/g' configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_SDK=y/# CONFIG_SDK is not set/g' configs/rockchip/01-nanopi
-#config
+#config1
+sed -i 's/CONFIG_TARGET_KERNEL_PARTSIZE=32/CONFIG_TARGET_KERNEL_PARTSIZE=64/g' .config
+sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=512/CONFIG_TARGET_ROOTFS_PARTSIZE=1024/g' .config
+#config2
 echo 'CONFIG_PACKAGE_luci-app-adbyby-plus=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_luci-app-qbittorrent=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_luci-app-uugamebooster=y' >> configs/rockchip/01-nanopi
