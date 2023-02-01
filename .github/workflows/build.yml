@@ -108,11 +108,11 @@ jobs:
         make -j$(nproc) || make -j1 V=s
         echo $?
 
-    - name: Check the result and try again
-      if: steps.compile.outcome == 'failure'
-      run: |
-        cd project/friendlywrt
-        make -j1 V=s
+#    - name: Check the result and try again
+#      if: steps.compile.outcome == 'failure'
+#      run: |
+#        cd project/friendlywrt
+#        make -j1 V=s
 
     - name: Create rootfs package
       id: create_rootfs_package
