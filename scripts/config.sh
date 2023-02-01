@@ -36,7 +36,6 @@ echo 'CONFIG_PACKAGE_nano=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_tree=y' >> configs/rockchip/01-nanopi
 #echo 'CONFIG_PACKAGE_odhcpd-ipv6only=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_kmod-tcp-bbr2=y' >> configs/rockchip/01-nanopi
-echo 'CONFIG_PACKAGE_luci-app-diskman=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_block-mount=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_DOCKER_CGROUP_OPTIONS=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_DOCKER_OPTIONAL_FEATURES=y' >> configs/rockchip/01-nanopi
