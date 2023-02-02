@@ -22,7 +22,7 @@ EOL
 })
 echo "CONFIG_PACKAGE_luci-theme-argon=y" >> configs/rockchip/01-nanopi
 #feeds.conf.default
-echo ' src-git small8 https://github.com/kenzok8/small-package' >> friendlywrt/feeds.conf.default
+echo 'src-git small8 https://github.com/kenzok8/small-package' >> friendlywrt/feeds.conf.default
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >> friendlywrt/feeds.conf.default
 #echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall.git;packages' >> friendlywrt/feeds.conf.default
 #echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git;luci' >> friendlywrt/feeds.conf.default
