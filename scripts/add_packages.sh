@@ -26,6 +26,8 @@ echo 'src-git small8 https://github.com/kenzok8/small-package' >> friendlywrt/fe
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >> friendlywrt/feeds.conf.default
 #echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall.git;packages' >> friendlywrt/feeds.conf.default
 #echo 'src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git;luci' >> friendlywrt/feeds.conf.default
+# Docker 容器
+rm -rf friendlywrt/feeds/luci/applications/luci-app-dockerman
 #
 sed -i -e 's/function init_theme/function old_init_theme/g' friendlywrt/target/linux/rockchip/armv8/base-files/root/setup.sh
 cat > /tmp/appendtext.txt <<EOL
