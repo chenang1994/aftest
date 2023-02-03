@@ -61,8 +61,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         repository: ${{ github.repository }}
-        tag: ${{ needs.prepare_release.outputs.release_tag }}
-        fileName: "rootfs-friendlywrt-${{ matrix.VERSION }}-docker.tgz"
+        tag: FriendlyWrt-2023-02-03
+        fileName: rootfs-friendlywrt-22.03-docker.tgz
 
     - name: Prepare config
       id: config
