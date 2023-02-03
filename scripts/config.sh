@@ -5,6 +5,7 @@ sed -i -e 's/CONFIG_IB=y/# CONFIG_IB is not set/g' configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_SDK=y/# CONFIG_SDK is not set/g' configs/rockchip/01-nanopi
 #config1
 sed -i 's/CONFIG_TARGET_KERNEL_PARTSIZE=32/CONFIG_TARGET_KERNEL_PARTSIZE=64/g' configs/rockchip/01-nanopi
+sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=512/CONFIG_TARGET_ROOTFS_PARTSIZE=2048/g' configs/rockchip/01-nanopi
 sed -i 's/CONFIG_PACKAGE_luci-theme-material=y/CONFIG_PACKAGE_luci-theme-material=n/g' configs/rockchip/01-nanopi
 sed -i 's/CONFIG_PACKAGE_luci-theme-openwrt=y/CONFIG_PACKAGE_luci-theme-openwrt=n/g' configs/rockchip/01-nanopi
 sed -i 's/CONFIG_PACKAGE_luci-theme-openwrt-2020=y/CONFIG_PACKAGE_luci-theme-openwrt-2020=n/g' configs/rockchip/01-nanopi
