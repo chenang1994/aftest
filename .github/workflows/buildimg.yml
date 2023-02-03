@@ -5,7 +5,6 @@ on:
   
 jobs:
   build_img:
-    needs: [prepare_release,build_friendlywrt]
     runs-on: ubuntu-20.04
     #if: github.event.repository.owner.id == github.event.sender.id
 
@@ -98,8 +97,8 @@ jobs:
         TARGET_SD_RAW_FILENAME=${FILENAME}
         EOL
         echo "##[set-output name=img_filename;]$FILENAME"
-        #
-        
+        #change size
+        sed -i 's/RAW_SIZE_MB=1000/RAW_SIZE_MB=7800/g' scripts/sd-fuse/mk-sd-image.sh
 
     - name: Unpack friendlywrt rootfs
       run: |
