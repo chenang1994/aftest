@@ -114,6 +114,12 @@ jobs:
 #        cd project/friendlywrt
 #        make -j1 V=s
 
+    - name: Upload bin directory
+      uses: actions/upload-artifact@main
+      with:
+        name: bin
+        path: project/friendlywrt/bin
+
     - name: Create rootfs package
       id: create_rootfs_package
       run: |
@@ -133,12 +139,6 @@ jobs:
         asset_name: ${{ steps.create_rootfs_package.outputs.rootfs_filename }}
         tag: ${{ needs.prepare_release.outputs.release_tag }}
         overwrite: true
-        
-    - name: Upload bin directory
-      uses: actions/upload-artifact@main
-      with:
-        name: bin
-        path: project/friendlywrt/bin
 
   build_img:
     needs: [prepare_release,build_friendlywrt]
