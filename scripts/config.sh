@@ -67,6 +67,7 @@ echo 'CONFIG_PACKAGE_luci-app-eqosplus=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_luci-app-passwall2=y' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_V2ray_Plugin=n' >> configs/rockchip/01-nanopi
 echo 'CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_sing-box=n' >> configs/rockchip/01-nanopi
+echo 'CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_shadowsocks-rust=n' >> configs/rockchip/01-nanopi
 #echo 'CONFIG_PACKAGE_luci-app-xray=y' >> configs/rockchip/01-nanopi
 #echo 'CONFIG_PACKAGE_docker-compose=y' >> configs/rockchip/01-nanopi
 #echo 'CONFIG_PACKAGE_luci-app-xunlei=y' >> configs/rockchip/01-nanopi
